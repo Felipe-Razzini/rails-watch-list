@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fa-solid fa-video"></i>
+    </a>
+    <div class="navbar-right">
+      <%= link_to "My Lists", lists_path %>
+      <%= link_to "New List", new_list_path %>
+    </div>
+  </div>
+</nav>
+
+<div class="banner">
+  <h1>Save any kind of movies</h1>
+</div>
+
+<div class="container mt-5">
+  <h5>My Lists</h5>
+ <div class="row">
+    <% @lists.each do |list| %>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to list.name, list_path(list.id), class: "text-white text-decoration-none" %></h5>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>

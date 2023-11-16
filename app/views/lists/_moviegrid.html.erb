@@ -1,0 +1,17 @@
+   <div class="row">
+    <% @bookmarks.movies.each do |movie| %>
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <img class="card-img-top" src="<%= movie.poster_url %>" alt="Card image cap">
+          <h5 class="card-title"><%= movie.title %></h5>
+          <p class="card-text"><%= movie.overview %></p>
+          <p class="card-text">
+          <%= movie.rating %>
+          <i class="fa-solid fa-star" style="color: #e2ff05;"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fa-solid fa-video"></i>
+    </a>
+    <div class="navbar-right">
+      <%= link_to "My Lists", lists_path %>
+      <%= link_to "New List", new_list_path %>
+    </div>
+  </div>
+</nav>
+
+<h1>New bookmark</h1>
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie_id %>
+  <%= f.association :list_id %>
+  <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fa-solid fa-video"></i>
+    </a>
+    <div class="navbar-right">
+      <%= link_to "My Lists", lists_path %>
+      <%= link_to "New List", new_list_path %>
+    </div>
+  </div>
+</nav>
+
+<div class="banner-list">
+  <h1><%= @list.name %></h1>
+</div>
+
+<div class="container mt-5">
+  <%= link_to "Add a Movie", new_list_bookmark_path %>
+
+</div>

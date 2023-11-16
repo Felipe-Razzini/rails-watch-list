@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fa-solid fa-video"></i>
+    </a>
+    <div class="navbar-right">
+      <%= link_to "My Lists", lists_path %>
+      <%= link_to "New List", new_list_path %>
+    </div>
+  </div>
+</nav>
+
+<h1>New List</h1>
+<div class="container w-400 ms-0">
+<%= render "form", list: @list %>
+</div>
